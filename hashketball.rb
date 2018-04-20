@@ -164,7 +164,7 @@ end
 
 def team_colors(team_name)
   # returns an array of team colors
-  binding.pry
+  game_hash.values.find {|team| team.fetch(:team_name) == team_name}
 end
 
 def team_names
