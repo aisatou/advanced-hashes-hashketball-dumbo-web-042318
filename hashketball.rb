@@ -164,7 +164,7 @@ end
 
 def team_colors(team_name)
   # returns an array of team colors
-  game_hash[:home].merge(game_hash[:away]).each do |team|
+  game_hash[:home].concat(game_hash[:away]).each do |team|
   binding.pry
 end
 end
