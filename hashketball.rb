@@ -179,20 +179,10 @@ def player_numbers(team_name)
   team_numbers = []
 
   game_hash.each do |team, team_details|
-   player_numbers_list = []
-  game_hash.each do |team, team_details_hash|
-    if team_details_hash[:name] == team_name
-      team_details_hash[:players].each do |player|
-        player.each do |key, value|
-          if key == :number 
-            player_numbers_list << value
-          end
-        end
-      end
-    end
-  end
-  player_numbers_list
-end
+   def player_numbers(game,team)
+  game[team][:players].each do |key, value|
+  puts game[team][:players][:number]
+  end 
 end
 
 def player_stats(player)
