@@ -171,7 +171,7 @@ end
 def team_names
   # return an array of the team names
   team = game_hash.values.find {|team| team.fetch(:team_name) == team_name}
-  team.fetch(:colors)
+  team.fetch(:players)
 end
 
 def player_numbers(team_name)
