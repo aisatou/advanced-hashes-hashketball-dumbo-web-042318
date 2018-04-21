@@ -191,11 +191,16 @@ end
 
 def player_stats(game, player)
   # returns a hash of player's player_stats
-   if game[:the_lakers][:players].has_key?(player) == true
-     game[:the_lakers][:players][player][:stats]
-   else
-     game[:the_celtics][:players][player][:stats]
-  end
+   player_stats = nil
+	game_hash.each do |location, loc_data|
+		loc_data[:players].each do |player, stats|
+			if stats[:player_name] == player_name
+	           player_stats = stats
+	           player_stats.delete(:player_name)
+			end
+		end
+	end
+	player_stats
 end
 
 
