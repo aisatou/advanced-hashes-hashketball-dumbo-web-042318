@@ -191,12 +191,12 @@ end
 
 def player_stats(player_name)
   # returns a hash of player's player_stats
-   player_stats = game_hash[:away][:players].fetch(game_hash[:home][:players]).each {|player| player.fetch(:player_name) == name}
-  # binding.pry
-  player_stats.delete(:player_name)
-  team.fetch(:stats)
-
-  return player_stats
+   game_hash.each do |origin, team|
+     stats = team[:players][player_name]
+      if stats # If not empty. Why does this have to be checked? If this line is commented out I get nil.
+          return stats
+      end
+    end
 end
 
 
