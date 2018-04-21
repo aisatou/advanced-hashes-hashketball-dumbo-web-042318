@@ -168,9 +168,9 @@ def team_colors(team_name)
   team.fetch(:colors)
 end
 
-def team_names(team_names)
+def team_names(team_name)
   # return an array of the team names
-  team = game_hash.values.find {|team| team.fetch(:team_names) == team_names}
+  team = game_hash.values.find {|team| team.fetch(:team_name) == team_name}
   team.fetch(:players)
 end
 
