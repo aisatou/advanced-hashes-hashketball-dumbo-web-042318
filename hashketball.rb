@@ -170,9 +170,8 @@ end
 
 def team_names
   # return an array of the team names
-  game_hash.collect do |team, team_details_hash|
-    team_details_hash[:name] 
-  end
+  teams = [game_hash[:home][:team_name], game_hash[:away][:team_name]]
+  teams
 end
 
 def player_numbers(team_name)
