@@ -189,7 +189,11 @@ end
 
 def player_stats(player)
   # returns a hash of player's player_stats
-  
+   if game[:the_lakers][:players].has_key?(player) == true
+     game[:the_lakers][:players][player][:stats]
+   else
+     game[:the_celtics][:players][player][:stats]
+  end
 end
 
 def big_shoe_rebounds
