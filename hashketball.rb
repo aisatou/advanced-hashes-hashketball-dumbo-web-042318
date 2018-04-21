@@ -206,15 +206,17 @@ end
 
 def big_shoe_rebounds
   # return the number of rebounds associated with the player that has the largest shoe size
-   big_shoes_guy = 0
-  rebounds = 0
-    game_hash.each do | team, team_details_hash|
-      team_details_hash[:players].each do | stats |
-        if stats[:shoe] > big_shoes_guy
-          big_shoes_guy = stats[:shoe]
-          rebounds = stats[:rebounds]
+   biggest_shoes_player = 0
+  num_of_rebounds = 0
+    game_hash.each do | team, team_stats|
+      team_stats[:players].each do | stats |
+        if stats[:shoe] > biggest_shoes_player
+          # binding.pry
+          biggest_shoes_player = stats[:shoe] # if conditional true, replaces big_shoes_guy, else it stays the same
+          num_of_rebounds = stats[:rebounds]
+          # binding.pry
         end
       end
     end
-  rebounds
+  num_of_rebounds
 end
