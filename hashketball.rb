@@ -189,7 +189,7 @@ def player_numbers(team_name)
 	jersey_nums
 end
 
-def player_stats(game, player)
+def player_stats(player_stats)
   # returns a hash of player's player_stats
    player_stats = nil
 	game_hash.each do |location, loc_data|
