@@ -168,7 +168,7 @@ def team_colors(team_name)
   team.fetch(:colors)
 end
 
-def team_names(team_name)
+def team_names
   # return an array of the team names
   game_hash.collect do |team, team_details_hash|
     team_details_hash[:name] 
