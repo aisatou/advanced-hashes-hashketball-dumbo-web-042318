@@ -187,7 +187,7 @@ end
 end
 end
 
-def player_stats(player)
+def player_stats(game, player)
   # returns a hash of player's player_stats
    if game[:the_lakers][:players].has_key?(player) == true
      game[:the_lakers][:players][player][:stats]
