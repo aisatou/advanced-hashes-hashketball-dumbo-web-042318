@@ -170,8 +170,9 @@ end
 
 def team_names(team_name)
   # return an array of the team names
-  team = game_hash.values.find {|team| team.fetch(:team_name) == team_name}
-  team.fetch(:players)
+  game_hash.collect do |team, team_details_hash|
+    team_details_hash[:name] 
+  end
 end
 
 def player_numbers(team_name)
