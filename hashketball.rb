@@ -145,6 +145,17 @@ end
 #   both
 # end
 
+def all_players
+  home_team = game_hash[:home][:players]
+  away_team = game_hash[:away][:players]
+
+  both_teams = home_team + away_team
+
+  both_teams
+  # binding.pry
+end
+
+
 def num_points_scored(player_name)
   game_hash[:away][:players].merge(game_hash[:home][:players]).each do |player|
     if player[0] == player_name
