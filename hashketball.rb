@@ -195,7 +195,7 @@ def player_stats(game, player)
      game[:the_celtics][:players][player][:stats]
   end
 end
-player_stats
+player_stats.fetch
 end
 
 def big_shoe_rebounds
