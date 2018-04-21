@@ -191,7 +191,7 @@ end
 
 def player_stats(player_name)
   # returns a hash of player's player_stats
-   player_stats = find_player = game_hash[:away][:players].merge(game_hash[:home][:players]).find.each {|player| player.fetch(:player_name) == name}
+   player_stats = find_player = game_hash[:away][:players].merge(game_hash[:home][:players]).find {|player| player.fetch(:player_name) == name}
   # binding.pry
   player_stats.delete(:player_name)
 
