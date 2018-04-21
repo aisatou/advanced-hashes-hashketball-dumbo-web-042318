@@ -195,8 +195,7 @@ def player_stats(game, player)
      game[:the_celtics][:players][player][:stats]
   end
 end
-player_stats.fetch
-end
+
 
 def big_shoe_rebounds
   # return the number of rebounds associated with the player that has the largest shoe size
