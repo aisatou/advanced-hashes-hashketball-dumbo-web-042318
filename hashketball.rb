@@ -184,6 +184,7 @@ def player_numbers(team_name)
   puts game[team][:players][:number]
   end 
 end
+end
 
 def player_stats(player)
   # returns a hash of player's player_stats
