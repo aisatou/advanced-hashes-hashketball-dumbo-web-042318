@@ -191,16 +191,11 @@ end
 
 def player_stats(player_name)
   # returns a hash of player's player_stats
-   player_stats = nil
-	game_hash.each do |location, loc_data|
-		loc_data[:players].each do |player, stats|
-			if stats[:player_name] == player_name
-	           player_stats = stats
-	           player_stats.delete(:player_name)
-			end
-		end
-	end
-	player_stats
+    player_stats = find_player = all_players.find {|player| player.fetch(:player_name) == name}
+  # binding.pry
+  player_stats.delete(:player_name)
+
+  return player_stats
 end
 
 
